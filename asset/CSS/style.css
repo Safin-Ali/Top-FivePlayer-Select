@@ -1,0 +1,93 @@
+/* ======================== 
+    External Font Import
+  ======================== */
+  @import url('http://fonts.cdnfonts.com/css/berkshire-swash');
+  @import url('http://fonts.cdnfonts.com/css/manrope');
+
+/* ======================== 
+    General CSS
+  ======================== */
+  html,body{
+    color: var(--white01);
+    background: var(--white02);
+    font-size: 16px;
+    font-family: 'Manrope', sans-serif;
+  }
+
+/* ======================== 
+      Custom Variables
+  ======================== */
+  :root{
+    --white01: #F4F6FF;
+    --white02: #EFEFEF;
+    --white03: #FAF9F9;
+    --black01: #212121;
+    --black02: #1B2430;
+    --black03: #444444;
+    --blue01: #015196;
+    --px24: 1.5rem;
+  }
+
+/* ======================== 
+        Common Class
+  ======================== */
+  .fontSize24{
+    font-size: var(--px24);
+  }
+/* ======================== 
+    Header Banner Area
+  ======================== */
+  .header-banner {
+    font-family: 'Berkshire Swash', sans-serif;
+  }
+
+/*=================================
+        Player Layout Grid
+==================================*/
+  .card-body{
+    color: var(--black02);
+    background: var(--white03);
+  }
+  .card-body p{
+    color: var(--black03);
+  }
+  .row h2{
+    font-weight: 800;
+    text-align: center;
+    font-size: var(--px24);
+  }
+  .selectBtn{
+    border: none;
+    color: var(--white01);
+    background: var(--blue01);
+    padding: .625rem 5rem;
+    font-weight: 500;
+  }
+
+/*=================================
+  Selected Players And Budget Body
+==================================*/
+.selected-player,.budget-body{
+  color: var(--black02);
+  background: var(--white03);
+  border-radius: 5px;
+}
+.selected-player ol{
+  color: var(--black03);
+}
+.calculateArea{
+  width: 300px;
+}
+.budget-body .row{
+  padding: 0 10px;
+}
+.budget-body p{
+  text-align: center;
+}
+.budget-body input{
+  width: 100px;
+  display: inline-block;
+  border: 1.5px solid var(--black02);
+  padding: 5px 0;
+}
+
