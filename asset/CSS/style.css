@@ -13,6 +13,9 @@
     font-size: 16px;
     font-family: 'Manrope', sans-serif;
   }
+  input:focus{
+    outline: none;
+  }
 
 /* ======================== 
       Custom Variables
@@ -21,24 +24,35 @@
     --white01: #F4F6FF;
     --white02: #EFEFEF;
     --white03: #FAF9F9;
+    --white04: #F4F6FF;
     --black01: #212121;
     --black02: #1B2430;
     --black03: #444444;
     --blue01: #015196;
+    --teal01: #37E2D5;
     --px24: 1.5rem;
   }
 
 /* ======================== 
         Common Class
   ======================== */
-  .fontSize24{
-    font-size: var(--px24);
+  .text-teal01{
+    color: var(--teal01);
   }
+
 /* ======================== 
     Header Banner Area
   ======================== */
   .header-banner {
+    min-height: 12.75rem;
+  }
+  .header-area h1{
+    font-size: 70px;
     font-family: 'Berkshire Swash', sans-serif;
+  }
+  .header-area p{
+    color: var(--white02);
+    font-weight: 500;
   }
 
 /*=================================
@@ -72,6 +86,7 @@
 }
 .selected-player ol{
   color: var(--black03);
+  font-weight: 800;
 }
 .calculateArea{
   width: 50%;
@@ -87,6 +102,8 @@
   display: inline-block;
   border: 1.5px solid var(--black02);
   padding: 5px 0;
+  padding-left: 10px;
+  background: var(--white02);
 }
 
 /* ======================== 
