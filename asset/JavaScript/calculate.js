@@ -1,4 +1,4 @@
-//  1. Select All Button by the Class Name
+//  1. Selected All Button by the Class Name
 
 const buttonClassesSelect = document.getElementsByClassName('selectBtn');
 const buttonClassesLength = document.getElementsByClassName('selectBtn').length;
@@ -7,7 +7,7 @@ let i = 0;
 
 for (i; i < buttonClassesLength; i++) {
     const buttonClass = buttonClassesSelect[i];
-    // const buttonIndex = i;
+    //  Select Button Event Handler
     const clickButton = buttonClass.addEventListener('click', function () {
         const getPlayerName = buttonClass.parentElement.childNodes[1].innerText;
         const playerList = document.getElementsByTagName('li').length;
@@ -17,7 +17,7 @@ for (i; i < buttonClassesLength; i++) {
             const buttonActiveColor = buttonClass.classList.add('blue-button-active', true)
             const buttonTextChange = buttonClass.innerText = 'Selected'
         } else if (playerList >= 5) {
-            alert('Error')
+            alert('Sorry! You Already Selected 5 Players')
             return
         }
     })
@@ -33,18 +33,26 @@ function setSelectedPlayer(playerName) {
     parentTag.appendChild(liTagCreate);
 }
 
-//  3. Calculate Button
+//  3. Calculate Total Player Budget Button Event Handler
 
-const clickCalculateBtn = document.getElementById('totalExpense').addEventListener('click',function(){
+const clickCalculateBtn = document.getElementById('totalExpense').addEventListener('click', function () {
     const getPlayerBudget = inputFeildValue('perPlayerFeild');
-    const getPlayersList = document.getElementsByTagName('li').length;
-    const totalExpense = getPlayersList * getPlayerBudget;
-    const NewValue = setNewValue('totalExpenseValue',totalExpense);
+    if(isNaN(getPlayerBudget)){
+        alert('Please Type Only Number')
+    }
+    else{
+        const getPlayersList = document.getElementsByTagName('li').length;
+        if(getPlayersList === 0){
+            alert('Please Select Any Five Players')
+        }
+        const totalExpense = getPlayersList * getPlayerBudget;
+        const NewValue = setNewValue('totalExpenseValue', totalExpense);
+    }
 })
 
 // 4. Get Player Budget To The Feild And Calculate selected player length with Entered Budget And Set Total Expense value
 
-function inputFeildValue(inputID,setvalueID) {
+function inputFeildValue(inputID, setvalueID) {
     const selectFeild = document.getElementById(inputID);
     const feildValue = parseInt(selectFeild.value);
     return feildValue;
@@ -52,19 +60,31 @@ function inputFeildValue(inputID,setvalueID) {
 
 // Set New Value To The Document
 
-function setNewValue (setValueID,setNewData) {
+function setNewValue(setValueID, setNewData) {
     const setNewValue = document.getElementById(setValueID).innerText = setNewData;
 }
 
-//  5. Calculate Total Cost Button
+//  5. Calculate Total Cost Button Event Handler
 
-    const clickTotalCostBtn = document.getElementById('totalCostBtn').addEventListener('click',function(){
-        const getManagerFee = inputFeildValue('managerFeild');
-        const getCourseFee = inputFeildValue('courseFeild');
-        const getPlayersTotalBudget = parseInt(document.getElementById('totalExpenseValue').innerText);
-        const calculateTotalCost = getCourseFee + getManagerFee + getPlayersTotalBudget;
-        const totalCost = setNewValue('totalCostValue',calculateTotalCost);
+const clickTotalCostBtn = document.getElementById('totalCostBtn').addEventListener('click', function () {
+    const getManagerFee = inputFeildValue('managerFeild');
+    const getCoachFee = inputFeildValue('coachFeild');
+    const getPlayersTotalBudget = parseInt(document.getElementById('totalExpenseValue').innerText);
+    if(isNaN(getManagerFee) && isNaN(getCoachFee) == true){
+        alert('Please Enter Manager And Coach Fee Amonut')
+    }
+    else if(isNaN(getManagerFee)){
+        alert('Please Enter Manager Fee Amonut')
+    }
+    else if(isNaN(getCoachFee)){
+        alert('Please Enter Coach Fee Amonut')
+    }
+    else if(getPlayersTotalBudget === 0){
+        alert('Please First Calculate Five Players Total Expense Amount')
+    }
+    else{
+        const calculateTotalCost = getCoachFee + getManagerFee + getPlayersTotalBudget;
+        const totalCost = setNewValue('totalCostValue', calculateTotalCost);
         return totalCost
-    })
-
-//  6. Get Manager & Course Feild Value
+    }
+})
