@@ -46,11 +46,10 @@
   .header-banner {
     min-height: 12.75rem;
   }
-  .header-area h1{
-    font-size: 70px;
+  .header-banner h1{
     font-family: 'Berkshire Swash', sans-serif;
   }
-  .header-area p{
+  .header-banner p{
     color: var(--white02);
     font-weight: 500;
   }

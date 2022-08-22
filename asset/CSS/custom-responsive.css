@@ -1,5 +1,30 @@
-@media only screen and (min-width:330px) and (max-width:991px){
+@media only screen and (min-width:330px) and (max-width:1199px){
     .calculateArea{
         width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* @media only screen and (max-width: 991px) {
+    .header-banner h1{
+        font-size: 25px;
+    }
+    .header-banner p{
+        font-size: 10px;
+    }
+} */
+
+@media only screen and (max-width: 575px){
+    .header-banner img{
+        display: none;
+    }
+    .header-banner h1{
+        font-size: 30px;
+        margin-top: 30px;
+    }
+    .header-banner p{
+        color: #1B2430;
+        font-size: 12px;
+        text-align: justify;
     }
 }
