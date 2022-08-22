@@ -8,7 +8,7 @@
     General CSS
   ======================== */
   html,body{
-    color: var(--white01);
+    color: var(--black02);
     background: var(--white02);
     font-size: 16px;
     font-family: 'Manrope', sans-serif;
@@ -45,7 +45,6 @@
         Player Layout Grid
 ==================================*/
   .card-body{
-    color: var(--black02);
     background: var(--white03);
   }
   .card-body p{
@@ -68,7 +67,6 @@
   Selected Players And Budget Body
 ==================================*/
 .selected-player,.budget-body{
-  color: var(--black02);
   background: var(--white03);
   border-radius: 5px;
 }
@@ -76,7 +74,7 @@
   color: var(--black03);
 }
 .calculateArea{
-  width: 300px;
+  width: 50%;
 }
 .budget-body .row{
   padding: 0 10px;
@@ -91,3 +89,9 @@
   padding: 5px 0;
 }
 
+/* ======================== 
+        Footer Body
+  ======================== */
+  footer{
+    border-top: 1.5px solid var(--black03);
+  }
