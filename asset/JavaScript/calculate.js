@@ -37,12 +37,11 @@ function setSelectedPlayer(playerName) {
 
 const clickCalculateBtn = document.getElementById('totalExpense').addEventListener('click', function () {
     const getPlayerBudget = inputFeildValue('perPlayerFeild');
-    if(isNaN(getPlayerBudget)){
+    if (isNaN(getPlayerBudget)) {
         alert('Please Type Only Number')
-    }
-    else{
+    } else {
         const getPlayersList = document.getElementsByTagName('li').length;
-        if(getPlayersList === 0){
+        if (getPlayersList === 0) {
             alert('Please Select Any Five Players')
         }
         const totalExpense = getPlayersList * getPlayerBudget;
@@ -70,19 +69,15 @@ const clickTotalCostBtn = document.getElementById('totalCostBtn').addEventListen
     const getManagerFee = inputFeildValue('managerFeild');
     const getCoachFee = inputFeildValue('coachFeild');
     const getPlayersTotalBudget = parseInt(document.getElementById('totalExpenseValue').innerText);
-    if(isNaN(getManagerFee) && isNaN(getCoachFee) == true){
+    if (isNaN(getManagerFee) && isNaN(getCoachFee) == true) {
         alert('Please Enter Manager And Coach Fee Amonut')
-    }
-    else if(isNaN(getManagerFee)){
+    } else if (isNaN(getManagerFee)) {
         alert('Please Enter Manager Fee Amonut')
-    }
-    else if(isNaN(getCoachFee)){
+    } else if (isNaN(getCoachFee)) {
         alert('Please Enter Coach Fee Amonut')
-    }
-    else if(getPlayersTotalBudget === 0){
+    } else if (getPlayersTotalBudget === 0) {
         alert('Please First Calculate Five Players Total Expense Amount')
-    }
-    else{
+    } else {
         const calculateTotalCost = getCoachFee + getManagerFee + getPlayersTotalBudget;
         const totalCost = setNewValue('totalCostValue', calculateTotalCost);
         return totalCost

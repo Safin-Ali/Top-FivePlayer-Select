@@ -1,112 +1,153 @@
 /* ======================== 
     External Font Import
   ======================== */
-  @import url('http://fonts.cdnfonts.com/css/berkshire-swash');
-  @import url('http://fonts.cdnfonts.com/css/manrope');
+@import url('http://fonts.cdnfonts.com/css/berkshire-swash');
+@import url('http://fonts.cdnfonts.com/css/manrope');
 
 /* ======================== 
     General CSS
   ======================== */
-  html,body{
-    color: var(--black02);
-    background: var(--white02);
-    font-size: 16px;
-    font-family: 'Manrope', sans-serif;
-  }
-  input:focus{
-    outline: none;
-  }
+html,
+body {
+  color: var(--black02);
+  background: var(--white02);
+  font-size: 16px;
+  font-family: 'Manrope', sans-serif;
+}
+
+.dark-body {
+  background-color: var(--black05);
+  color: #f7f7f7;
+}
+
+#dark-card {
+  border-color: var(--black03);
+}
+
+#dark-card-body {
+  background: var(--black04);
+}
+
+#dark-card-body p {
+  color: var(--white05);
+}
+
+input:focus {
+  outline: none;
+}
 
 /* ======================== 
       Custom Variables
   ======================== */
-  :root{
-    --white01: #F4F6FF;
-    --white02: #EFEFEF;
-    --white03: #FAF9F9;
-    --white04: #F4F6FF;
-    --black01: #212121;
-    --black02: #1B2430;
-    --black03: #444444;
-    --blue01: #015196;
-    --blue02: #186fb6;
-    --teal01: #37E2D5;
-    --px24: 1.5rem;
-  }
+:root {
+  --white01: #F4F6FF;
+  --white02: #EFEFEF;
+  --white03: #FAF9F9;
+  --white04: #F4F6FF;
+  --white05: #bebebe;
+  --black01: #212121;
+  --black02: #1B2430;
+  --black03: #444444;
+  --black04: #0d0d0d;
+  --black05: #151515;
+  --blue01: #015196;
+  --blue02: #186fb6;
+  --teal01: #37E2D5;
+  --px24: 1.5rem;
+}
 
 /* ======================== 
         Common Class
   ======================== */
-  .text-teal01{
-    color: var(--teal01);
-  }
+.text-teal01 {
+  color: var(--teal01);
+}
 
 /* ======================== 
     Header Banner Area
   ======================== */
-  .header-banner {
-    min-height: 12.75rem;
-  }
-  .header-banner h1{
-    font-family: 'Berkshire Swash', sans-serif;
-  }
-  .header-banner p{
-    color: var(--white02);
-    font-weight: 500;
-  }
+.header-banner {
+  min-height: 12.75rem;
+}
+
+.header-banner h1 {
+  font-family: 'Berkshire Swash', sans-serif;
+}
+
+.header-banner p {
+  color: var(--white02);
+  font-weight: 500;
+}
 
 /*=================================
         Player Layout Grid
 ==================================*/
-  .card-body{
-    background: var(--white03);
-  }
-  .card-body p{
-    color: var(--black03);
-  }
-  .row h2{
-    font-weight: 800;
-    text-align: center;
-    font-size: var(--px24);
-  }
-  .blue-button{
-    border: none;
-    color: var(--white01);
-    background: var(--blue02);
-    padding: .625rem 5rem;
-    font-weight: 500;
-    transition: background-color .3s linear;
-  }
-  .blue-button:hover{
-    background-color: var(--blue01);
-  }
-  .blue-button-active{
-    background-color: var(--blue01);
-    padding: .625rem 4.6875rem;
-    cursor: not-allowed;
-  }
+.card-body {
+  background: var(--white03);
+}
+
+.card-body p {
+  color: var(--black03);
+}
+
+.row h2 {
+  font-weight: 800;
+  text-align: center;
+  font-size: var(--px24);
+}
+
+.blue-button {
+  border: none;
+  color: var(--white01);
+  background: var(--blue02);
+  padding: .625rem 5rem;
+  font-weight: 500;
+  transition: background-color .3s linear;
+}
+
+.blue-button:hover {
+  background-color: var(--blue01);
+}
+
+.blue-button-active {
+  background-color: var(--blue01);
+  padding: .625rem 4.6875rem;
+  cursor: not-allowed;
+}
 
 /*=================================
   Selected Players And Budget Body
 ==================================*/
-.selected-player,.budget-body{
+
+#dark-player-list-budget-body{
+  background: var(--black04);
+  border: 1px solid var(--white05);
+}
+
+.selected-player,
+.budget-body {
   background: var(--white03);
   border-radius: 5px;
 }
-.selected-player ol{
+
+.selected-player ol {
   color: var(--black03);
   font-weight: 800;
 }
-.calculateArea{
+
+.calculateArea {
   width: 50%;
 }
-.budget-body .row{
+
+.budget-body .row {
   padding: 0 10px;
 }
-.budget-body p{
+
+.budget-body p {
   text-align: center;
 }
-.budget-body input{
+
+.budget-body input {
   width: 100px;
   display: inline-block;
   border: 1.5px solid var(--black02);
@@ -118,6 +159,6 @@
 /* ======================== 
         Footer Body
   ======================== */
-  footer{
-    border-top: 1.5px solid var(--black03);
-  }
+footer {
+  border-top: 1.5px solid var(--black03);
+}
