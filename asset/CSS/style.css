@@ -75,7 +75,7 @@
     background: var(--blue02);
     padding: .625rem 5rem;
     font-weight: 500;
-    transition: background-color 1s linear;
+    transition: background-color .3s linear;
   }
   .blue-button:hover{
     background-color: var(--blue01);
