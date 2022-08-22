@@ -29,6 +29,7 @@
     --black02: #1B2430;
     --black03: #444444;
     --blue01: #015196;
+    --blue02: #186fb6;
     --teal01: #37E2D5;
     --px24: 1.5rem;
   }
@@ -68,12 +69,21 @@
     text-align: center;
     font-size: var(--px24);
   }
-  .selectBtn{
+  .blue-button{
     border: none;
     color: var(--white01);
-    background: var(--blue01);
+    background: var(--blue02);
     padding: .625rem 5rem;
     font-weight: 500;
+    transition: background-color 1s linear;
+  }
+  .blue-button:hover{
+    background-color: var(--blue01);
+  }
+  .blue-button-active{
+    background-color: var(--blue01);
+    padding: .625rem 4.6875rem;
+    cursor: not-allowed;
   }
 
 /*=================================
