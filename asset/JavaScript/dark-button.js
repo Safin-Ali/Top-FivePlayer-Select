@@ -21,7 +21,7 @@ document.getElementById('darkMode').addEventListener('click', function () {
     }
     //  Select ll input tag
     for (const inputTag of inputTags) {
-        inputTag.style = `border: 1px solid #efefef; background: #151515; caret-color: #efefef`
+        inputTag.style = `border: 1px solid #efefef; background: #151515; color: #efefef`
     }
 
 })
